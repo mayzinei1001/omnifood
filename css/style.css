@@ -54,12 +54,13 @@ General Components
 ********************************************************************/
 .container {
 	width: 120rem;
-	padding: 9.6rem 0;
+	padding: 9.6rem 3.2rem;
 	margin: 0 auto;
 }
 .grid {
 	display: grid;
-	gap: 9.6rem;
+	row-gap: 9.6rem;
+	column-gap: 6.4rem;
 }
 .grid--2--cols {
 	grid-template-columns: repeat(2, 1fr);
@@ -70,13 +71,28 @@ General Components
 .grid--4--cols {
 	grid-template-columns: repeat(4, 1fr);
 }
-
-.heading-primary {
-	font-size: 5.2rem;
+.grid--center--v {
+	align-items: center;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
 	font-weight: 700;
-	line-height: 1.1;
 	color: #333;
 	letter-spacing: -0.5px;
+}
+.heading-primary {
+	font-size: 5.2rem;
+	line-height: 1.1;
+	margin-bottom: 3.2rem;
+}
+.heading-secondary {
+	font-size: 4.4rem;
+	line-height: 1.2;
+}
+.heading-tertiary {
+	font-size: 3rem;
+	line-height: 1.2;
 	margin-bottom: 3.2rem;
 }
 .btn:link,
@@ -206,30 +222,48 @@ Hero Section
 }
 .hero-cus-small span {
 	color: #cf711f;
+	font-weight: 700;
 }
 
 /********************************************************************
 How it work Section
 ********************************************************************/
-.how-section {
-	background-color: orangered;
+.step-number {
+	font-size: 8.6rem;
+	font-weight: 700;
+	color: #ddd;
+	margin-bottom: 3.2rem;
 }
-.how-it-work div {
-	padding: 10rem;
-	font-size: 3rem;
+.step-description {
+	font-size: 1.8rem;
+	line-height: 1.8;
 }
-.how-it-work div:nth-child(1) {
-	background-color: aqua;
+.step-img-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
-.how-it-work div:nth-child(2) {
-	background-color: yellow;
+.step-img-box::before,
+.step-img-box::after {
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
-.how-it-work div:nth-child(3) {
-	background-color: pink;
+.step-img-box::before {
+	width: 60%;
+	padding-bottom: 60%;
+	background-color: #fdf2e9;
 }
-.how-it-work div:nth-child(4) {
-	background-color: blue;
+.step-img-box::after {
+	width: 45%;
+	padding-bottom: 45%;
+	background-color: #fae5d3;
 }
-.how-it-work div:nth-child(5) {
-	background-color: violet;
+.step-img {
+	width: 35%;
 }

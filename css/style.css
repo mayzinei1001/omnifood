@@ -34,99 +34,6 @@ default : 10px;
 
 */
 
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-html {
-	font-size: 62.5%;
-}
-body {
-	font-family: "Rubik", sans-serif;
-	font-weight: 400;
-	color: #555;
-	line-height: 1;
-}
-
-/********************************************************************
-General Components
-********************************************************************/
-.container {
-	width: 120rem;
-	padding: 4.8rem 2.4rem;
-	margin: 0 auto;
-}
-.grid {
-	display: grid;
-	row-gap: 9.6rem;
-	column-gap: 6.4rem;
-}
-.grid--2--cols {
-	grid-template-columns: repeat(2, 1fr);
-}
-.grid--3--cols {
-	grid-template-columns: repeat(3, 1fr);
-}
-.grid--4--cols {
-	grid-template-columns: repeat(4, 1fr);
-}
-.grid--center--v {
-	align-items: center;
-}
-.heading-primary,
-.heading-secondary,
-.heading-tertiary {
-	font-weight: 700;
-	color: #333;
-	letter-spacing: -0.5px;
-}
-.heading-primary {
-	font-size: 5.2rem;
-	line-height: 1.1;
-	margin-bottom: 3.2rem;
-}
-.heading-secondary {
-	font-size: 4.4rem;
-	line-height: 1.2;
-}
-.heading-tertiary {
-	font-size: 3rem;
-	line-height: 1.2;
-	margin-bottom: 3.2rem;
-}
-.btn:link,
-.btn:visited {
-	display: inline-block;
-	text-decoration: none;
-	font-size: 2rem;
-	font-weight: 600;
-	padding: 1.6rem 2.4rem;
-	border-radius: 10px;
-	transition: all 0.3s;
-}
-.btn--full:link,
-.btn--full:visited {
-	background-color: #e67e22;
-	color: #fff;
-}
-.btn-right-sm {
-	margin-right: 1.6rem !important;
-}
-.btn--outline:link,
-.btn--outline:visited {
-	background-color: #fff;
-	color: #555;
-}
-.btn--full:hover,
-.btn--full:active {
-	background-color: #cf711f;
-}
-.btn--outline:hover,
-.btn--outline:active {
-	background-color: #fdf2e9;
-	box-shadow: inset 0 0 0 3px #fff;
-}
 /********************************************************************
 Header Components
 ********************************************************************/
@@ -227,6 +134,9 @@ Hero Section
 /********************************************************************
 Feature In Section
 ********************************************************************/
+.feature-in-section {
+	padding: 4.8rem 0;
+}
 .heading-feature-in {
 	text-align: center;
 	text-transform: uppercase;
@@ -248,14 +158,8 @@ Feature In Section
 /********************************************************************
 How it work Section
 ********************************************************************/
-.sub-heading {
-	display: block;
-	font-size: 1.6rem;
-	font-weight: 500;
-	color: #cf711f;
-	text-transform: uppercase;
-	margin-bottom: 1.6rem;
-	letter-spacing: 0.75px;
+.how-section {
+	padding: 9.6rem 0;
 }
 .step-number {
 	font-size: 8.6rem;
@@ -295,4 +199,128 @@ How it work Section
 }
 .step-img {
 	width: 35%;
+}
+
+/********************************************************************
+Testimonial Section
+********************************************************************/
+.testimonial-section {
+	background-color: #fdf2e9;
+	padding: 3.4rem 0;
+}
+.testimonial {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4.8rem;
+}
+.left-testi {
+	padding-left: 9.6rem;
+}
+.testi-cus-img {
+	height: 6.4rem;
+	width: 6.4rem;
+	border-radius: 50%;
+}
+.testi-review {
+	font-size: 1.8rem;
+	line-height: 2em;
+	padding-bottom: 2rem;
+}
+.testi-cus-name {
+	font-size: 1.8rem;
+	color: #777;
+}
+.right-testi {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.6rem;
+}
+.gallery-img {
+	overflow: hidden;
+}
+.gallery-img img {
+	display: block;
+	width: 100%;
+	transition: all 0.4s;
+}
+.gallery-img img:hover {
+	transform: scale(1.1);
+}
+/********************************************************************
+Meal Section
+********************************************************************/
+.section-meals {
+	padding: 9.6rem 0;
+}
+
+.meal {
+	box-shadow: 0 3.2rem 4.8rem rgba(0, 0, 0, 0.075);
+	border-radius: 20px;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.meal-img {
+	width: 100%;
+}
+.meal-content {
+	padding: 3.2rem 4.8rem 4.8rem;
+}
+.meal-title {
+	font-size: 2.4rem;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 3.2rem;
+}
+.meal-attributes {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.meal-attribute {
+	font-size: 1.8rem;
+	display: flex;
+	align-items: center;
+	gap: 1.4rem;
+}
+.meal-icon {
+	color: #e67e22;
+	font-size: 2.4rem;
+}
+
+.tag--vegetarian {
+	background-color: #51cf66;
+}
+.tag--vegan {
+	background-color: #a9e34b;
+}
+.tag--parelo {
+	background-color: #fcc419;
+}
+.diet-bold {
+	font-weight: 700;
+}
+.list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+.list-item {
+	font-size: 1.8rem;
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+}
+.list-icon {
+	color: #e67e22;
+	width: 3rem;
+	height: 3rem;
+}
+.all-recipes {
+	padding-top: 4.8rem;
+	text-align: center;
+}
+.meal:hover {
+	transform: translateY(-1.2rem);
 }
